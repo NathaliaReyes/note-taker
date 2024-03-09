@@ -41,6 +41,7 @@ notes.delete('/:id', (req, res) => {
     .catch((err) => {
         res.status(500).json({ error: 'Failed to delete note' });
     })
+});
 
 
 module.exports = notes;
