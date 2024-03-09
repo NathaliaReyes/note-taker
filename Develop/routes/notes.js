@@ -28,5 +28,19 @@ notes.post('/', (req, res) => {
     }
 });
 
+// DELETE route for a specific note
+notes.delete('/:id', (req, res) => {
+    const noteId = req.params.id;
+    readFromFile('./db/db.json')
+    .then((data) => JSON.parse(data))
+    .then((json) => {
+        const result = json.filter((note) => note.id !== noteId);
+        writeToFile('./db/db.json', result);
+        res.json('Note deleted successfully');
+    })
+    .catch((err) => {
+        res.status(500).json({ error: 'Failed to delete note' });
+    })
+
 
 module.exports = notes;
