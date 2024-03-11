@@ -6,12 +6,18 @@ This is the Challenge 11 related to Express.js
 ## Description
 This project, Note-Taker, is a full-stack application that provides a seamless interface for users to manage their notes. It leverages Express.js on the backend to handle HTTP requests for creating, updating, retrieving, and deleting notes. The frontend, built with HTML, CSS, and JavaScript, interacts with the backend through these requests, providing a user-friendly way to manage notes. This project serves as a practical example of how frontend and backend can work together in a cohesive application. Developers can use tools like Postman to test each endpoint and ensure they are working as expected.
 
-This is the link to the deployed application:  
+## Website-Appearance
+
+Link to the live application:  
 🔗[Note-Taker]()
+
+The following image shows the web application's appearance and functionality:
+![APPEARANCE-APPLICATION](./Assets/11-express-homework-demo.gif)
 
 ## Table of Contents
 - [📝 note-taker](#-note-taker)
   - [Description](#description)
+  - [Website-Appearance](#website-appearance)
   - [Table of Contents](#table-of-contents)
   - [Installation](#installation)
   - [Usage](#usage)
