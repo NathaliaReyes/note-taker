@@ -43,5 +43,35 @@ notes.delete('/:id', (req, res) => {
     })
 });
 
+// UPDATE route for a specific note
+notes.put('/:id', (req, res) => {
+    const noteId = req.params.id;
+    const { title, text } = req.body;
+
+    readFromFile('./db/db.json')
+    .then((data) => JSON.parse(data))
+    .then((json) => {
+        console.log(json)
+        // Find the index of the note with the given id:
+        const index = json.findIndex((note) => note.id === noteId);
+        console.log(index)   
+
+        // If the note was found in the array
+        if(index !== -1) {
+            // Update the note at the found index
+            json[index] = { title, text, id: noteId };
+
+            // Write the updated notes back to the file
+            writeToFile('./db/db.json', json);
+            res.json('Note updated successfully')
+        } else {
+            res.error('Error in adding note');
+        }
+    })
+    .catch((err) => {
+        res.status(500).json({ error: 'Failed to update note' });
+    })
+})
+
 
 module.exports = notes;
