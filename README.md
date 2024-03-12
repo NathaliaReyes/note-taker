@@ -42,11 +42,10 @@ The usage of this application is to provide a user-friendly interface for creati
 
 This is a step-by-step guide on how to use this application:
 1. **Install the application:** Clone or download the application to your local machine. Then, navigate to the application directory in your terminal, go to the Develop folder and run npm install to install the necessary dependencies, including Express.js and the uuid library for generating unique identifiers for notes.
-  > npm install
-  > npm install uuid
+    > npm install
 
 1. **Run the application:** In the terminal, run the command **node server.js** to start the application. This will start the server on your local machine.
-   > node server.js
+    > node server.js
 
 2. **Answer the prompts:** The application will prompt you with a series of questions about specific details for the logo, such as the color, shape, and any text they want to include.
 
